@@ -4,6 +4,8 @@ import org.openid4java.message.MessageExtension;
 import org.openid4java.message.ParameterList;
 
 /**
+ * Commonality between {@link TeamExtensionRequest} and {@link TeamExtensionResponse}.
+ * 
  * @author Kohsuke Kawaguchi
  */
 public abstract class TeamExtensionMessage implements MessageExtension {

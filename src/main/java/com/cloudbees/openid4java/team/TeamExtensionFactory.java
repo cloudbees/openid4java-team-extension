@@ -7,6 +7,8 @@ import org.openid4java.message.MessageExtensionFactory;
 import org.openid4java.message.ParameterList;
 
 /**
+ * Databinding of OpenID team extension to the openid4java library.
+ *
  * @author Kohsuke Kawaguchi
  */
 public class TeamExtensionFactory implements MessageExtensionFactory {
@@ -23,6 +25,9 @@ public class TeamExtensionFactory implements MessageExtensionFactory {
             return new TeamExtensionResponse(parameterList);
     }
 
+    /**
+     * Registers this extension to openid4java.
+     */
     public static void install() {
         try {
             Message.addExtensionFactory(TeamExtensionFactory.class);
