@@ -3,6 +3,7 @@ package com.cloudbees.openid4java.team;
 import org.openid4java.message.ParameterList;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -24,6 +25,8 @@ public class TeamExtensionResponse extends TeamExtensionMessage {
      * in the {@link TeamExtensionRequest}.
      */
     public Set<String> getTeamMembership() {
-        return new TreeSet<String>(Arrays.asList(params.getParameterValue("is_member").split(",")));
+        String v = params.getParameterValue("is_member");
+        if (v==null)    return Collections.emptySet();  // no value set by the server
+        return new TreeSet<String>(Arrays.asList(v.split(",")));
     }
 }
