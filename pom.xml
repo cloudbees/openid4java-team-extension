@@ -19,4 +19,25 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <scm>
+    <connection>scm:git:git://github.com/cloudbees/openid4java-team-extension.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/cloudbees/openid4java-team-extension.git</developerConnection>
+    <url>https://github.com/cloudbees/openid4java-team-extension</url>
+  </scm>
+
+  <licenses>
+    <license>
+      <name>The MIT license</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>maven.hudson-labs.org</id>
+      <url>http://maven.hudson-labs.org:8081/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
